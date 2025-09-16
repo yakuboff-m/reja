@@ -2,7 +2,6 @@ console.log('Web Serverni boshlash');
 const express = require("express");
 const app = express();
 const http = require("http");
-const { list } = require("postcss");
 
 // 1: Kirish code
 app.use(express.static("public"));
