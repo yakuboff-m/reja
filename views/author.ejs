@@ -1,1 +1,204 @@
-<div>Hello World</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="main_frame">
+            <div class="left_frame">
+                <div class="left_1">
+                    <div class="left_1-1">
+                        <img 
+                            width="156px"
+                            height="142px"
+                            src="images/Profile.png" alt="">
+                    </div>
+                    <div class="left_1-2">
+                        <%=user.name%>
+                    </div>
+                    <div class="left_1-3">
+                        <%=user.profession%>
+                    </div>
+                    <div class="social-icons">
+                        <img src="icon/Facebook.svg" alt="">
+                        <img src="icon/Instagram.svg" alt="">
+                        <img src="icon/Twitter.svg" alt="">
+                        <img src="icon/Linkeding.svg" alt="">
+                        <img src="icon/Youtube.svg" alt="">
+                        <img class="dribble" src="icon/Dribbble.png" alt="">
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_2">
+                    <img src="left-frame/Age.svg" alt="">
+                    <img src="left-frame/Residence.svg" alt="">
+                    <img src="left-frame/Freelance.svg" alt="">
+                    <img src="left-frame/Address.svg" alt="">
+                </div>
+                <div class="marginer"></div>
+                <div class="left_3">
+                    <h2 class="lang">Languages</h2>
+                    <div class="languages">
+                        <div class="langauge">
+                            <div class="uzbek font-style">
+                                <%=user.languages[0]%>
+                                <span>100%</span>
+                            </div>
+                            <img src="left-frame/Line100.svg" alt="">
+                        </div>
+                        <div class="langauge">
+                            <div class="korean font-style">
+                                <%=user.languages[1]%>
+                                <span>80%</span>
+                            </div>
+                            <img src="left-frame/Line80.svg" alt="">
+                        </div>
+                        <div class="langauge">
+                            <div class="english font-style">
+                                <%=user.languages[2]%>
+                                <span>60%</span>
+                            </div>
+                            <img src="left-frame/Line60.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_4">
+                    <h2 class="title">Skills</h2>
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="title-item font-style">
+                                <%=user.skills[0]%>
+                                <span>90%</span>
+                            </div>
+                            <img src="left-frame/Line90.svg" alt="">
+                        </div>
+                        <div class="skill">
+                            <div class="title-item font-style">
+                                <%=user.skills[1]%>
+                                <span>85%</span>
+                            </div>
+                            <img src="left-frame/Line85.svg" alt="">
+                        </div>
+                        <div class="skill">
+                            <div class="title-item font-style">
+                                <%=user.skills[2]%>
+                                <span>80%</span>
+                            </div>
+                            <img src="left-frame/Line80.svg" alt="">
+                        </div>
+                        <div class="skill">
+                            <div class="title-item font-style">
+                                <%=user.skills[3]%>
+                                <span>75%</span>
+                            </div>
+                            <img src="left-frame/Line75.svg" alt="">
+                        </div>
+                        <div class="skill">
+                            <div class="title-item font-style">
+                                <%=user.skills[3]%>
+                                <span>85%</span>
+                            </div>
+                            <img src="left-frame/Line85.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_5">
+                    <h2 class="title">Skills</h2>
+                    <div class="extra-skills">
+                        <div class="font_style">
+                            <img src="left-frame/Icons.svg" alt="">
+                            <%=user.extra_skills[0]%>
+                        </div>
+                        <div class="font_style">
+                            <img src="left-frame/Icons.svg" alt="">
+                            <%=user.extra_skills[1]%>
+                        </div>
+                        <div class="font_style">
+                            <img src="left-frame/Icons.svg" alt="">
+                            <%=user.extra_skills[2]%>
+                        </div>
+                        <div class="font_style">
+                            <img src="left-frame/Icons.svg" alt="">
+                            <%=user.extra_skills[3]%>
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+            </div>
+            <div class="midd_frame">
+                <div class="midd-top">
+                    <div class="midd-top__content">
+                        <h1>Doctor neurologists <br>
+                        in OHSU Hospital </h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing <br>
+                            elit. Et, volutpat feugiat placerat <br>lobortis. Natoque rutrum semper sed suspendisse nunc lectus.</p>
+                        <img src="btn_icons/Book Me.svg" alt="">
+                    </div>
+                    <img class="person" src="images/person.png" alt="">
+                </div>
+                <div class="midd-bott">
+                    <div class="midd-bot__container">
+                        <h1 class="text-center">My Services</h1>
+                        <p class="text-center">Amet minim mollit non deserunt ullamco est sit aliqua dolor <br> do amet sint. Velit officia consequat duis enim velit mollit. <br> lorem ipsum</p>
+                    </div>
+                    <div class="cards">
+                        <div class="cards-top">
+                            <div class="card">
+                                <img src="box_images/coding.svg" alt="">
+                                <h3>Web Development</h3>
+                                <p>Blog, E-commerce</p>
+                            </div>
+                            <div class="card">
+                                <img src="box_images/illustration.svg" alt="">
+                                <h3>UI/UX design</h3>
+                                <p>Mobile app, website design</p>
+                            </div>
+                            <div class="card">
+                                <img src="box_images/Microphone.svg" alt="">
+                                <h3>sound design</h3>
+                                <p>Voice Over, Beat Making</p>
+                            </div>
+                        </div>
+                        <div class="cards-top">
+                            <div class="card">
+                                <img src="box_images/game-dev.svg" alt="">
+                                <h3>game design</h3>
+                                <p>Character Design, Props & Objects</p>
+                            </div>
+                            <div class="card">
+                                <img src="box_images/Photographer.svg" alt="">
+                                <h3>photography</h3>
+                                <p>portrait, product photography</p>
+                            </div>
+                            <div class="card">
+                                <h3>advertising</h3>
+                                <p>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit. Vitae <br>nulla diam in ac dictum a urna <br> viverra morbi. </p>
+                                <img src="box_images/order.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_frame">
+                <img class="contrast" src="menu-icon/Contrast.svg" alt="">
+                <img class="home" src="menu-icon/Home.svg" alt="">
+                <div class="menu-icons">
+                    <img src="menu-icon/Service.svg" alt="">
+                    <img src="menu-icon/Cv.svg" alt="">
+                    <img src="menu-icon/Portfolio.svg" alt="">
+                    <img src="menu-icon/Blog.svg" alt="">
+                    <img src="menu-icon/Contact.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
