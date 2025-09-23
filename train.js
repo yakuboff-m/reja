@@ -1,31 +1,53 @@
 // < ========== TASK A start ========== >
 // Task A via callback
-function countLetter(letter, word, callback) {
-  if (typeof letter !== "string" || typeof word !== "string") {
-    callback("Both arguments must be strings", null);
-    return;
-  }
-  if (letter.length !== 1) {
-    callback("First argument must be a single character", null);
-    return;
-  }
+//  ⭐️ Synchronous function vs Asynchronous function
+// Asynchronous: CALLBACK
 
-  setTimeout(() => {
-    let total = 0;
-    for (let char of word) {
-      if (char === letter) {
-        total++;
-      }
-    }
-
-    callback(null, total);
-  }, 1000); 
+// DEFINE
+function qoldiqliBolish(a, b, callback) {
+  if (b === 0) {
+    callback("Mahraj nolga teng bolmaydi", null);
+  } else {
+    const c = a % b;
+    callback(null, c, true);
+  }
 }
 
-countLetter("e", "developer", (err, result) => {
+// CALL
+qoldiqliBolish(5, 4, (err, data) => {
   if (err) console.log("ERROR:", err);
-  else console.log("Count:", result);
+  else {
+    console.log("data:", data);
+    console.log("MATIQLAR ...");
+  }
 });
+
+// function countLetter(letter, word, callback) {
+//   if (typeof letter !== "string" || typeof word !== "string") {
+//     callback("Both arguments must be strings", null);
+//     return;
+//   }
+//   if (letter.length !== 1) {
+//     callback("First argument must be a single character", null);
+//     return;
+//   }
+
+//   setTimeout(() => {
+//     let total = 0;
+//     for (let char of word) {
+//       if (char === letter) {
+//         total++;
+//       }
+//     }
+
+//     callback(null, total);
+//   }, 1000); 
+// }
+
+// countLetter("e", "developer", (err, result) => {
+//   if (err) console.log("ERROR:", err);
+//   else console.log("Count:", result);
+// });
 
 // Task A via async
 
