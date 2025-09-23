@@ -1,26 +1,78 @@
+// < ========== TASK B start ========== >
+// Task B via callback
+function countDigits(a, callback) {
+    if (typeof a !== "string") {
+        callback("insert a string!", null);
+    } else {
+        let count = 0; 
+        for (let i = 0; i < a.length; i++) {
+            if (!isNaN(a[i]) && a[i] !== " ") {
+                count++;
+            }
+        }
+        callback(null, count); 
+    }
+}
+
+countDigits("bc5d32k6c23", (err, data) => {
+    if (err) console.log("ERROR:", err);
+    else {
+        console.log("javob:", data);
+    }
+});
+
+// Task B via async func
+// async function countDigits(a) {
+//     if (typeof a !== "string") {
+//         throw new Error("insert a string!");
+//     } else {
+//         let count = 0; 
+//         for (let i = 0; i < a.length; i++) {
+//             if (!isNaN(a[i]) && a[i] !== " ") {
+//                 count++;
+//             }
+//         }
+//         return count; 
+//     }
+// }
+
+// countDigits("ewwye32hjsd2")
+//     .then(count => {
+//         console.log(count)
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
+
+// < ========== TASK B end ========== >
+
+
+
+
+
 // < ========== TASK A start ========== >
 // Task A via callback
 //  ⭐️ Synchronous function vs Asynchronous function
 // Asynchronous: CALLBACK
 
 // DEFINE
-function qoldiqliBolish(a, b, callback) {
-  if (b === 0) {
-    callback("Mahraj nolga teng bolmaydi", null);
-  } else {
-    const c = a % b;
-    callback(null, c, true);
-  }
-}
+// function qoldiqliBolish(a, b, callback) {
+//   if (b === 0) {
+//     callback("Mahraj nolga teng bolmaydi", null);
+//   } else {
+//     const c = a % b;
+//     callback(null, c, true);
+//   }
+// }
 
-// CALL
-qoldiqliBolish(5, 4, (err, data) => {
-  if (err) console.log("ERROR:", err);
-  else {
-    console.log("data:", data);
-    console.log("MATIQLAR ...");
-  }
-});
+// // CALL
+// qoldiqliBolish(5, 4, (err, data) => {
+//   if (err) console.log("ERROR:", err);
+//   else {
+//     console.log("data:", data);
+//     console.log("MATIQLAR ...");
+//   }
+// });
 
 // function countLetter(letter, word, callback) {
 //   if (typeof letter !== "string" || typeof word !== "string") {
