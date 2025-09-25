@@ -1,25 +1,72 @@
-// < ========== TASK B start ========== >
-// Task B via callback
-function countDigits(a, callback) {
-    if (typeof a !== "string") {
-        callback("insert a string!", null);
-    } else {
-        let count = 0; 
-        for (let i = 0; i < a.length; i++) {
-            if (!isNaN(a[i]) && a[i] !== " ") {
-                count++;
-            }
-        }
-        callback(null, count); 
-    }
+// < ========== TASK C start ========== >
+// Task C via callback
+function checkLetter(str1, str2, callback) {
+    if (str1.length !== str2.length) {
+        callback(null, false);
+    } 
+
+    const sorted1 = str1.split('').sort().join('');
+    const sorted2 = str2.split('').sort().join('');
+
+    callback(null, sorted1 === sorted2);
 }
 
-countDigits("bc5d32k6c23", (err, data) => {
-    if (err) console.log("ERROR:", err);
+checkLetter("qwerty", "ytrewq", (err, data) => {
+    if (err) console.log(false);
     else {
-        console.log("javob:", data);
+        console.log(data);
     }
-});
+})
+
+
+// Task C via async
+// async function checkLetter(str1, str2) {
+//     if (str1.length !== str2.length) {
+//         return false;
+//     }
+
+//     const sorted1 = str1.split('').sort().join('');
+//     const sorted2 = str2.split('').sort().join('');
+
+//     return sorted1 === sorted2;
+// }
+
+// (async () => {
+//     const result1 = await checkLetter("qwerty", "ytrewq");
+//     console.log(result1);
+
+//     const result2 = await checkLetter("qwerftty", "ytrewq");
+//     console.log(result2); 
+// })();
+
+
+// < ========== TASK C end ========== >
+
+
+
+
+// < ========== TASK B start ========== >
+// Task B via callback
+// function countDigits(a, callback) {
+//     if (typeof a !== "string") {
+//         callback("insert a string!", null);
+//     } else {
+//         let count = 0; 
+//         for (let i = 0; i < a.length; i++) {
+//             if (!isNaN(a[i]) && a[i] !== " ") {
+//                 count++;
+//             }
+//         }
+//         callback(null, count); 
+//     }
+// }
+
+// countDigits("bc5d32k6c23", (err, data) => {
+//     if (err) console.log("ERROR:", err);
+//     else {
+//         console.log("javob:", data);
+//     }
+// });
 
 // Task B via async func
 // async function countDigits(a) {
