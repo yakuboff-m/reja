@@ -2,7 +2,8 @@ const { log } = require("console");
 const http = require("http");
 
 const mongodb = require("mongodb");
-
+// (HTTP -> hyper text transmitting protocol )
+// TCP (BS + DB) - transmitting control protocol
 let db;
 const connectionString = "mongodb+srv://yakuboff-m:x9wJSk1cjnkchjrF@cluster0.eorpluv.mongodb.net/Reja";
 
@@ -13,7 +14,7 @@ mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: tr
         module.exports = client; // (client -> claster)
         const app = require("./app");
         const server = http.createServer(app);
-        let PORT = 3000;
+        let PORT = process.env.PORT || 3000;
         server.listen(PORT, function(){
         console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`);
         }); 
