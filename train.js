@@ -1,22 +1,94 @@
-// < ========== TASK C start ========== >
-// Task C via callback
-function checkLetter(str1, str2, callback) {
-    if (str1.length !== str2.length) {
-        callback(null, false);
-    } 
+// < ========== TASK D start ========== >
 
-    const sorted1 = str1.split('').sort().join('');
-    const sorted2 = str2.split('').sort().join('');
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
 
-    callback(null, sorted1 === sorted2);
+  getTime() {
+    let now = new Date();
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    return `${hour}:${minute}`;
+  }
+
+  sotish(mahsulot, miqdor) {
+    if (mahsulot === 'non') {
+    this.non -= miqdor;
+    } else if (mahsulot === 'lagmon') {
+        this.lagmon -= miqdor;
+    } else if (mahsulot === 'cola') {
+        this.cola -= miqdor;
+    } else {
+        console.log("Bunday mahsulot yo'q!");
+    }
+
+    console.log(`Hozir ${this.getTime()} da ${miqdor} ta ${mahsulot} sotildi.`);
+    }
+
+
+  qabul(mahsulot, miqdor) {
+  if (mahsulot === 'non') {
+    this.non += miqdor;
+  } else if (mahsulot === 'lagmon') {
+    this.lagmon += miqdor;
+  } else if (mahsulot === 'cola') {
+    this.cola += miqdor;
+  } else {
+    console.log("Bunday mahsulot yo'q!");
+  }
+
+  console.log(`Hozir ${this.getTime()} da ${miqdor} ta ${mahsulot} qabul qilindi.`);
+  }
+
+  qoldiq() {
+    console.log(`Hozir ${this.getTime()} da:
+    Non: ${this.non} ta
+    Lagmon: ${this.lagmon} ta
+    Cola: ${this.cola} ta`);
+  }
+
 }
 
-checkLetter("qwerty", "ytrewq", (err, data) => {
-    if (err) console.log(false);
-    else {
-        console.log(data);
-    }
-})
+const myShop = new Shop(4, 6, 8);
+myShop.qoldiq();
+
+console.log("========= sotuv ========");
+myShop.sotish('non', 1);
+
+console.log("========= qabul ========");
+myShop.qabul('lagmon', 2);
+
+console.log("========= qoldiq ========");
+myShop.qoldiq();
+
+// < ========== TASK D end ========== >
+
+
+
+
+
+// < ========== TASK C start ========== >
+// Task C via callback
+// function checkLetter(str1, str2, callback) {
+//     if (str1.length !== str2.length) {
+//         callback(null, false);
+//     } 
+
+//     const sorted1 = str1.split('').sort().join('');
+//     const sorted2 = str2.split('').sort().join('');
+
+//     callback(null, sorted1 === sorted2);
+// }
+
+// checkLetter("qwerty", "ytrewq", (err, data) => {
+//     if (err) console.log(false);
+//     else {
+//         console.log(data);
+//     }
+// })
 
 
 // Task C via async
