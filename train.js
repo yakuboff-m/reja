@@ -1,68 +1,85 @@
-// < ========== TASK D start ========== >
+// < ========== TASK E start ========== >
 
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-  }
-
-  getTime() {
-    let now = new Date();
-    let hour = now.getHours();
-    let minute = now.getMinutes();
-    return `${hour}:${minute}`;
-  }
-
-  sotish(mahsulot, miqdor) {
-    if (mahsulot === 'non') {
-    this.non -= miqdor;
-    } else if (mahsulot === 'lagmon') {
-        this.lagmon -= miqdor;
-    } else if (mahsulot === 'cola') {
-        this.cola -= miqdor;
-    } else {
-        console.log("Bunday mahsulot yo'q!");
-    }
-
-    console.log(`Hozir ${this.getTime()} da ${miqdor} ta ${mahsulot} sotildi.`);
-    }
-
-
-  qabul(mahsulot, miqdor) {
-  if (mahsulot === 'non') {
-    this.non += miqdor;
-  } else if (mahsulot === 'lagmon') {
-    this.lagmon += miqdor;
-  } else if (mahsulot === 'cola') {
-    this.cola += miqdor;
+function getReverse(a) {
+  if(typeof a !== "string") {
+    console.log("Please, insert a string")
   } else {
-    console.log("Bunday mahsulot yo'q!");
+    const sorted = a.split('').reverse().join('');
+    console.log(sorted);
   }
-
-  console.log(`Hozir ${this.getTime()} da ${miqdor} ta ${mahsulot} qabul qilindi.`);
-  }
-
-  qoldiq() {
-    console.log(`Hozir ${this.getTime()} da:
-    Non: ${this.non} ta
-    Lagmon: ${this.lagmon} ta
-    Cola: ${this.cola} ta`);
-  }
-
 }
 
-const myShop = new Shop(4, 6, 8);
-myShop.qoldiq();
+getReverse("string");
 
-console.log("========= sotuv ========");
-myShop.sotish('non', 1);
+// < ========== TASK E end ========== >
 
-console.log("========= qabul ========");
-myShop.qabul('lagmon', 2);
 
-console.log("========= qoldiq ========");
-myShop.qoldiq();
+
+// < ========== TASK D start ========== >
+
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
+
+//   getTime() {
+//     let now = new Date();
+//     let hour = now.getHours();
+//     let minute = now.getMinutes();
+//     return `${hour}:${minute}`;
+//   }
+
+//   sotish(mahsulot, miqdor) {
+//     if (mahsulot === 'non') {
+//     this.non -= miqdor;
+//     } else if (mahsulot === 'lagmon') {
+//         this.lagmon -= miqdor;
+//     } else if (mahsulot === 'cola') {
+//         this.cola -= miqdor;
+//     } else {
+//         console.log("Bunday mahsulot yo'q!");
+//     }
+
+//     console.log(`Hozir ${this.getTime()} da ${miqdor} ta ${mahsulot} sotildi.`);
+//     }
+
+
+//   qabul(mahsulot, miqdor) {
+//   if (mahsulot === 'non') {
+//     this.non += miqdor;
+//   } else if (mahsulot === 'lagmon') {
+//     this.lagmon += miqdor;
+//   } else if (mahsulot === 'cola') {
+//     this.cola += miqdor;
+//   } else {
+//     console.log("Bunday mahsulot yo'q!");
+//   }
+
+//   console.log(`Hozir ${this.getTime()} da ${miqdor} ta ${mahsulot} qabul qilindi.`);
+//   }
+
+//   qoldiq() {
+//     console.log(`Hozir ${this.getTime()} da:
+//     Non: ${this.non} ta
+//     Lagmon: ${this.lagmon} ta
+//     Cola: ${this.cola} ta`);
+//   }
+
+// }
+
+// const myShop = new Shop(4, 6, 8);
+// myShop.qoldiq();
+
+// console.log("========= sotuv ========");
+// myShop.sotish('non', 1);
+
+// console.log("========= qabul ========");
+// myShop.qabul('lagmon', 2);
+
+// console.log("========= qoldiq ========");
+// myShop.qoldiq();
 
 // < ========== TASK D end ========== >
 
