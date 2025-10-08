@@ -1,15 +1,34 @@
-// < ========== TASK E start ========== >
+// < ========== TASK F end ========== >
 
-function getReverse(a) {
-  if(typeof a !== "string") {
-    console.log("Please, insert a string")
-  } else {
-    const sorted = a.split('').reverse().join('');
-    console.log(sorted);
+function findTwins(str) {
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j < str.length; j++) {
+      if (str[i] === str[j]) {
+        return true;
+      }
+    }
   }
+  return false;
 }
 
-getReverse("string");
+console.log(findTwins('asdfgs'));
+// < ========== TASK F end ========== >
+
+
+
+
+// < ========== TASK E start ========== >
+
+// function getReverse(a) {
+//   if(typeof a !== "string") {
+//     console.log("Please, insert a string")
+//   } else {
+//     const sorted = a.split('').reverse().join('');
+//     console.log(sorted);
+//   }
+// }
+
+// getReverse("string");
 
 // < ========== TASK E end ========== >
 
